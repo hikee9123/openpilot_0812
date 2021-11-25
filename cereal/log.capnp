@@ -324,7 +324,7 @@ struct DeviceState @0xa4d8b5af2aa492eb {
   screenBrightnessPercent @37 :Int8;
 
   # atom
-  wifiIpAddress @38 :Text;
+  wifiIpAddress @40 :Text;
 
   struct ThermalZone {
     name @0 :Text;
