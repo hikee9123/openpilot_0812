@@ -243,7 +243,7 @@ static void update_state(UIState *s) {
 
 void ui_update_params(UIState *s) {
   s->scene.is_metric = Params().getBool("IsMetric");
-  s->IsOpenpilotViewEnabled = Params().getBool("IsOpenpilotViewEnabled");
+  s->scene.IsOpenpilotViewEnabled = Params().getBool("IsOpenpilotViewEnabled");
 }
 
 static void update_status(UIState *s) {
