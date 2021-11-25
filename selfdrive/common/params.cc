@@ -170,6 +170,23 @@ std::unordered_map<std::string, uint32_t> keys = {
     {"Offroad_TemperatureTooHigh", CLEAR_ON_MANAGER_START},
     {"Offroad_UnofficialHardware", CLEAR_ON_MANAGER_START},
     {"Offroad_UpdateFailed", CLEAR_ON_MANAGER_START},
+
+    {"IsOpenpilotViewEnabled", CLEAR_ON_MANAGER_START},
+    {"OpkrAutoResume", PERSISTENT},
+    {"OpkrLiveSteerRatio", PERSISTENT},
+    {"OpkrTurnSteeringDisable", PERSISTENT},
+    {"PutPrebuiltOn", PERSISTENT},
+    {"OpkrUIBrightnessOff", PERSISTENT},
+    {"OpkrAutoScreenOff", PERSISTENT},
+    {"OpkrUIBrightness", PERSISTENT},
+    {"OpkrUIVolumeBoost", PERSISTENT},  
+    {"LongitudinalControl", PERSISTENT},
+    {"OpkrSSHLegacy", PERSISTENT},
+    {"OpkrAutoFocus", PERSISTENT},
+
+    {"OpkrRunNaviOnBoot", PERSISTENT},
+    {"OpkrMapEnable", PERSISTENT},
+    {"OpkrParameters", PERSISTENT},
 };
 
 } // namespace

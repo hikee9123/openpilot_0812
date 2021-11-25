@@ -65,6 +65,9 @@ services = {
   "navInstruction": (True, 0.),
   "navRoute": (True, 0.),
 
+# atom
+  "liveNaviData": (True, 0.),
+
   # debug
   "testJoystick": (False, 0.),
 }

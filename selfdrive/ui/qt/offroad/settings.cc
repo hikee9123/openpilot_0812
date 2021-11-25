@@ -25,6 +25,8 @@
 #include "selfdrive/ui/qt/util.h"
 #include "selfdrive/ui/qt/qt_window.h"
 
+#include "atom/userPanel.h"
+
 TogglesPanel::TogglesPanel(SettingsWindow *parent) : ListWidget(parent) {
   // param, title, desc, icon
   std::vector<std::tuple<QString, QString, QString, QString>> toggles{
@@ -367,6 +369,7 @@ SettingsWindow::SettingsWindow(QWidget *parent) : QFrame(parent) {
     {"Network", network_panel(this)},
     {"Toggles", new TogglesPanel(this)},
     {"Software", new SoftwarePanel(this)},
+    {"Community", new CUserPanel(this)},    
   };
 
 #ifdef ENABLE_MAPS
@@ -375,7 +378,7 @@ SettingsWindow::SettingsWindow(QWidget *parent) : QFrame(parent) {
   QObject::connect(map_panel, &MapPanel::closeSettings, this, &SettingsWindow::closeSettings);
 #endif
 
-  const int padding = panels.size() > 3 ? 25 : 35;
+  const int padding = panels.size() > 3 ? 15 : 35;
 
   nav_btns = new QButtonGroup(this);
   for (auto &[name, panel] : panels) {
