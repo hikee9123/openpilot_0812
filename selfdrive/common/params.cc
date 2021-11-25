@@ -180,7 +180,7 @@ std::unordered_map<std::string, uint32_t> keys = {
     {"OpkrAutoScreenOff", PERSISTENT},
     {"OpkrUIBrightness", PERSISTENT},
     {"OpkrUIVolumeBoost", PERSISTENT},  
-    {"LongitudinalControl", PERSISTENT},
+    {"OpkrPandaFirmwareCk", PERSISTENT},
     {"OpkrSSHLegacy", PERSISTENT},
     {"OpkrAutoFocus", PERSISTENT},
 

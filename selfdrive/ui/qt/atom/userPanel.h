@@ -103,13 +103,13 @@ public:
 };
 
 
-class CLongitudinalControlToggle : public ToggleControl {
+class CPandaFirmWare : public ToggleControl {
   Q_OBJECT
 
 public:
-  CLongitudinalControlToggle() : ToggleControl("Longitudinal Control", "가감속 제어를 오픈파일럿에서 제어 합니다.", "../assets/offroad/icon_shell.png", Params().getBool("LongitudinalControl")) {
-    QObject::connect(this, &CLongitudinalControlToggle::toggleFlipped, [=](int state) {
-      Params().putBool("LongitudinalControl", (bool)state);
+  CPandaFirmWare() : ToggleControl("Panda Firmware Check", "판다의 FirmWare를 확인합니다..", "../assets/offroad/icon_shell.png", Params().getBool("OpkrPandaFirmwareCk")) {
+    QObject::connect(this, &CPandaFirmWare::toggleFlipped, [=](int state) {
+      Params().putBool("OpkrPandaFirmwareCk", (bool)state);
     });
   }
 };

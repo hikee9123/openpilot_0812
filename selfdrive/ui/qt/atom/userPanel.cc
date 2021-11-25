@@ -107,7 +107,7 @@ CUserPanel::CUserPanel(QWidget* parent) : QFrame(parent)
    layout()->addWidget(new CPrebuiltToggle());
   
   layout()->addWidget(horizontal_line());
-  layout()->addWidget(new CLongitudinalControlToggle() );
+  layout()->addWidget(new CPandaFirmWare() );
   layout()->addWidget(horizontal_line());  
   layout()->addWidget(new RunNaviOnBootToggle());
   layout()->addWidget(horizontal_line());
@@ -134,7 +134,7 @@ CUserPanel::CUserPanel(QWidget* parent) : QFrame(parent)
   });
 
   auto build_exe = new ButtonControl("build 실행", "실행",
-                                        "/data/openpilot/selfdrive/manager/build.py 을 실행 합니다.");
+                                    "/data/openpilot/selfdrive/manager/build.py 을 실행 합니다.");
   connect(build_exe, &ButtonControl::clicked, [=]() 
   { 
           if (ConfirmationDialog::confirm("Are you sure you want to exec(build.py)?", this)) 
@@ -145,7 +145,7 @@ CUserPanel::CUserPanel(QWidget* parent) : QFrame(parent)
 
 
   auto finger_exe = new ButtonControl("핑거 2.0 실행", "실행",
-                                        "/data/openpilot/selfdrive/car/fw_versions.py 을 실행 합니다.");
+                                      "/data/openpilot/selfdrive/car/fw_versions.py 을 실행 합니다.");
   connect(finger_exe, &ButtonControl::clicked, [=]() 
   { 
           if (ConfirmationDialog::confirm("Are you sure you want to exec(fw_versions.py)?", this)) 
@@ -155,7 +155,7 @@ CUserPanel::CUserPanel(QWidget* parent) : QFrame(parent)
   });
 
   auto android_exe = new ButtonControl("Android Open", "Open",
-                                        "Android를 Open 합니다.");
+                                      "Android를 Open 합니다.");
   connect(android_exe, &ButtonControl::clicked, [=]() 
   { 
           if (ConfirmationDialog::confirm("Are you sure you want to exec(Android)?", this)) 

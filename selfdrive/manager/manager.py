@@ -47,7 +47,7 @@ def manager_init():
     ("OpkrAutoFocus", "0"),
     ("OpkrUIBrightness", "0"),
     ("OpkrUIVolumeBoost", "0"),    
-    ("LongitudinalControl", "0"),
+    ("OpkrPandaFirmwareCk", "0"),
     ("OpkrRunNaviOnBoot", "0"),
     ("OpkrSSHLegacy", "0"), 
   ]
