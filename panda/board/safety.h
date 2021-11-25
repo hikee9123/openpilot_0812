@@ -40,7 +40,7 @@
 #define SAFETY_HYUNDAI_COMMUNITY 24U
 #define SAFETY_STELLANTIS 25U
 
-uint16_t current_safety_mode = SAFETY_SILENT;
+uint16_t current_safety_mode = SAFETY_NOOUTPUT;
 int16_t current_safety_param = 0;
 const safety_hooks *current_hooks = &nooutput_hooks;
 const addr_checks *current_rx_checks = &default_rx_checks;
