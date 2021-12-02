@@ -351,14 +351,17 @@ struct CarControl {
 
     enum AudibleAlert {
       none @0;
-      chimeEngage @1;
-      chimeDisengage @2;
-      chimeError @3;
-      chimeWarning1 @4; # unused
-      chimeWarningRepeat @5;
-      chimeWarningRepeatInfinite @6;
-      chimePrompt @7;
-      chimeWarning2RepeatInfinite @8;
+
+      engage @1;
+      disengage @2;
+      refuse @3;
+
+      warningSoft @4;
+      warningImmediate @5;
+
+      prompt @6;
+      promptRepeat @7;
+      promptDistracted @8;
     }
   }
 
@@ -520,7 +523,7 @@ struct CarParams {
     allOutput @17;
     gmAscm @18;
     noOutput @19;  # like silent but without silent CAN TXs
-    hondaBoschHarness @20;
+    hondaBosch @20;
     volkswagenPq @21;
     subaruLegacy @22;  # pre-Global platform
     hyundaiLegacy @23;
