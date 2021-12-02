@@ -147,7 +147,6 @@ def manager_thread():
     # ignore += ["manage_athenad","proclogd","clocksd","timezoned"]
 
 
-  ignore = []
   if params.get("DongleId", encoding='utf8') == UNREGISTERED_DONGLE_ID:
     ignore += ["manage_athenad", "uploader"]
   if os.getenv("NOBOARD") is not None:
