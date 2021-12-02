@@ -10,6 +10,13 @@ from selfdrive.swaglog import cloudlog
 
 TESTED_BRANCHES = ['master-ci', 'release2-staging', 'release3-staging', 'dashcam-staging', 'release2', 'release3', 'dashcam']
 
+training_version: bytes = b"0.2.0"
+terms_version: bytes = b"2"
+
+
+def cache(user_function, /):
+  return lru_cache(maxsize=None)(user_function)
+
 
 def run_cmd(cmd: List[str]) -> str:
   return subprocess.check_output(cmd, encoding='utf8').strip()

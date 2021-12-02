@@ -1514,9 +1514,10 @@ struct Event {
     # navigation
     navInstruction @82 :NavInstruction;
     navRoute @83 :NavRoute;
+    navThumbnail @84: Thumbnail;
 
     # atom NAVI Info
-    liveNaviData @84 :LiveNaviData;
+    liveNaviData @85 :LiveNaviData;
 
     # *********** debug ***********
     testJoystick @52 :Joystick;
