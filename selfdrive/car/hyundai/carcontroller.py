@@ -227,10 +227,11 @@ class CarController():
     # 20 Hz LFA MFA message
     if frame % 5 == 0:
       self.update_debug( CS, vFuture )
-      if self.car_fingerprint in FEATURES["send_lfa_mfa"]:
-        can_sends.append(create_lfahda_mfc(self.packer, enabled))
-      elif self.car_fingerprint in FEATURES["send_hda_mfa"]:
+      if self.car_fingerprint in FEATURES["send_hda_mfa"]:
         can_sends.append(create_hda_mfc(self.packer, CS, c ))
+      elif self.car_fingerprint in FEATURES["send_lfa_mfa"]:
+        can_sends.append(create_lfahda_mfc(self.packer, enabled))
+
         
     self.lkas11_cnt += 1
     return can_sends
