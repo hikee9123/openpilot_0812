@@ -9,7 +9,7 @@ from selfdrive.swaglog import cloudlog
 # OPKR 
 
 #android_packages = ("com.mixplorer", "com.opkr.maphack",  "com.gmd.hidesoftkeys", "com.google.android.inputmethod.korean", "com.skt.tmap.ku",)
-android_packages = ("com.mixplorer","com.gmd.hidesoftkeys", "com.opkr.maphack", "com.mnsoft.mappyobn",)   # "com.skt.tmap.ku",
+android_packages = ("com.mixplorer","com.gmd.hidesoftkeys", "com.opkr.maphack", "com.mnsoft.mappyobn","Gboard the Google Keyboard_v11.2.08.404227572-release-arm64-v8a_apkpure.com")   # "com.skt.tmap.ku",
 
 def get_installed_apks():
   dat = subprocess.check_output(["pm", "list", "packages", "-f"], encoding='utf8').strip().split("\n")
