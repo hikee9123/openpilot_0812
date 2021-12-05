@@ -442,6 +442,25 @@ class CarState(CarStateBase):
           ("AEB_CmdAct", "SCC12", 0),
           ("CF_VSM_Warn", "SCC12", 0),
         ]
+    else:
+      signals += [
+        ("MainMode_ACC", "SCC11", 0),
+        ("VSetDis", "SCC11", 0),
+        ("SCCInfoDisplay", "SCC11", 0),
+        ("ACC_ObjDist", "SCC11", 0),
+
+        ("ACCMode", "SCC12", 0),
+        ("StopReq", "SCC12", 0),
+        ("aReqRaw", "SCC12", 0),
+        ("aReqValue", "SCC12", 0),
+        ("CR_VSM_Alive", "SCC12", 0),
+        ("CR_VSM_ChkSum", "SCC12", 0),
+      ]
+
+      checks += [
+        ("SCC11", 50),
+        ("SCC12", 50),
+      ]      
 
     if CP.enableBsm:
       signals += [
